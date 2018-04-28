@@ -46,6 +46,7 @@ class StreamTest extends \PHPUnit_Framework_TestCase
         $this->new = new Stream();
 
         $this->nexmoClient = $this->prophesize('Nexmo\Client');
+        $this->nexmoClient->getApiUrl()->willReturn('https://api.nexmo.com');
         $this->entity->setClient($this->nexmoClient->reveal());
         $this->new->setClient($this->nexmoClient->reveal());
     }

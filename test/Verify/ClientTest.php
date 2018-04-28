@@ -33,6 +33,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->nexmoClient = $this->prophesize('Nexmo\Client');
+        $this->nexmoClient->getApiUrl()->willReturn('https://api.nexmo.com');
         $this->client = new Client();
         $this->client->setClient($this->nexmoClient->reveal());
     }
@@ -44,6 +45,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     {
         $client = $this->prophesize('Nexmo\Client');
         $client->send(Argument::cetera())->willReturn($this->getResponse($response));
+        $client->getApiUrl()->willReturn('http://api.nexmo.com');
 
         $this->client->setClient($client->reveal());
 

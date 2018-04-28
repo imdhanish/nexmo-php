@@ -37,7 +37,7 @@ class Client implements ClientAwareInterface
         ]);
 
         $request = new Request(
-            \Nexmo\Client::BASE_REST . '/account/get-pricing/outbound/'.$pricingType.'?'.$queryString,
+            $this->getClient()->getRestUrl() . '/account/get-pricing/outbound/'.$pricingType.'?'.$queryString,
             'GET',
             'php://temp'
         );
@@ -56,7 +56,7 @@ class Client implements ClientAwareInterface
     {
 
         $request = new Request(
-            \Nexmo\Client::BASE_REST . '/account/get-balance',
+            $this->getClient()->getRestUrl() . '/account/get-balance',
             'GET',
             'php://temp'
         );
@@ -81,7 +81,7 @@ class Client implements ClientAwareInterface
         ];
 
         $request = new Request(
-            \Nexmo\Client::BASE_REST . '/account/top-up'
+            $this->getClient()->getRestUrl() . '/account/top-up'
             ,'POST'
             , 'php://temp'
             , ['content-type' => 'application/x-www-form-urlencoded']

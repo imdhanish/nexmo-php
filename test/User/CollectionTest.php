@@ -34,6 +34,7 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->nexmoClient = $this->prophesize(Client::class);
+        $this->nexmoClient->getApiUrl()->willReturn('https://api.nexmo.com');
         $this->collection = new Collection();
         $this->collection->setClient($this->nexmoClient->reveal());
     }

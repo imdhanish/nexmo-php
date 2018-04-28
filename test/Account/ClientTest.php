@@ -33,6 +33,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->nexmoClient = $this->prophesize('Nexmo\Client');
+        $this->nexmoClient->getRestUrl()->willReturn('https://rest.nexmo.com');
         $this->accountClient = new Client();
         $this->accountClient->setClient($this->nexmoClient->reveal());
     }
