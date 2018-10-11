@@ -517,3 +517,4 @@ This library is released under the [MIT License][license]
 [license]: LICENSE.txt
 [send_example]: examples/send.php
 [spec]: https://github.com/Nexmo/client-library-specification
+[issues]: https://github.com/Nexmo/nexmo-php/issues
