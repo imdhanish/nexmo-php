@@ -151,8 +151,8 @@ echo "The body of the message was: " . $message->getBody();
 
 ### Starting a Verification
 
-Nexmo's [Verify API][doc_verify] makes it easy to prove that a user has provided their own phone number during signup, 
-or implement second factor authentication during signin.
+Nexmo's [Verify API][doc_verify] makes it easy to prove that a user has provided their own phone number during sign up, 
+or implement second factor authentication during sign in.
 
 You can start a verification process using a simple array:
 
@@ -175,7 +175,7 @@ echo "Started verification with an id of: " . $verification->getRequestId();
 ### Controlling a Verification
     
 To cancel an in-progress verification, or to trigger the next attempt to send the confirmation code, you can pass 
-either an exsisting verification object to the client library, or simply use a request ID:
+either an existing verification object to the client library, or simply use a request ID:
 
 ```php
 $client->verify()->trigger('00e6c3377e5348cdaf567e1417c707a5');
@@ -215,7 +215,7 @@ try {
 
 ### Searching For a Verification
 
-You can check the status of a verification, or access the results of past verifications using either an exsisting 
+You can check the status of a verification, or access the results of past verifications using either an existing 
 verification object, or a request ID. The verification object will then provide a rich interface:
 
 ```php
