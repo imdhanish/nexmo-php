@@ -31,7 +31,7 @@ composer require nexmo/client
 If you're new to Composer, here are some resources that you may find useful:
 
 * [Composer's Getting Started page](https://getcomposer.org/doc/00-intro.md) from Composer project's documentation.
-* [A Beginner's Guide to Composer](https://scotch.io/tutorials/a-beginners-guide-to-composer) from the good people at ScotchBox.
+* [A Beginner's Guide to Composer](https://scotch.io/tutorials/a-beginners-guide-to-composer) from the good people at ScratchBox.
 
 Usage
 -----
@@ -500,7 +500,7 @@ Contributing
 ------------
 
 This library is currently being refactored from an earlier prototype to match the current [client library spec][spec].
-The `legacy` branch can be used to require that earlier version. During the transition the `develop` and `master` 
+The `legacy` branch can be used to require that earlier version. During the transition, the `develop` and `master` 
 branches will have both new and legacy code. The [API coverage](#API-Coverage) section identifies what features are 
 currently implemented and up to date. 
 
